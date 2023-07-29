@@ -1,11 +1,11 @@
 local httpService = game:GetService('HttpService')
 local ThemeManager = {} do
-	ThemeManager.Folder = 'LinoriaLibSettings'
+	ThemeManager.Folder = "Reaper's Hub"
 	-- if not isfolder(ThemeManager.Folder) then makefolder(ThemeManager.Folder) end
 
 	ThemeManager.Library = nil
 	ThemeManager.BuiltInThemes = {
-        ['Reapers Hub']     = { 1, httpService:JSONDecode('{"MainColor":"191919","AccentColor":"c400ff","OutlineColor":"000000","BackgroundColor":"141414","FontColor":"cacaca"}') },
+        ['Reapers Hub']     = { 1, httpService:JSONDecode('{"FontColor":"cacaca","MainColor":"191919","AccentColor":"c400ff","BackgroundColor":"141414","OutlineColor":"000000"}') },
 		['Default'] 		= { 2, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1c1c1c","AccentColor":"0055ff","BackgroundColor":"141414","OutlineColor":"323232"}') },
 		['BBot'] 			= { 3, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1e1e1e","AccentColor":"7e48a3","BackgroundColor":"232323","OutlineColor":"141414"}') },
 		['Fatality']		= { 4, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1e1842","AccentColor":"c50754","BackgroundColor":"191335","OutlineColor":"3c355d"}') },
