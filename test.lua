@@ -1188,7 +1188,11 @@ do
                     return Key == 'MB1' and InputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1)
                         or Key == 'MB2' and InputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton2);
                 else
-                    return InputService:IsKeyDown(Enum.KeyCode[KeyPicker.Value]);
+                    UserInputService.InputBegan:Connect(function(_, typing)
+                        if not typing then
+                            return InputService:IsKeyDown(Enum.KeyCode[KeyPicker.Value]);
+                        end
+                    end)
                 end;
             else
                 return KeyPicker.Toggled;
